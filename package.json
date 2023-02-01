@@ -4,7 +4,8 @@
   "description": "backend de una pagina de pedidos de comida, donde el usuario se tiene q registrar para poder hacer los pedidos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js"
   },
   "repository": {
     "type": "git",
