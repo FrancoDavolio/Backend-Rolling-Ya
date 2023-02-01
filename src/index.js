@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import path from 'path'
 import * as dotenv from 'dotenv'
 import './database'
+import usuarioRouter from './routes/usuario.routes'
 
 dotenv.config()
 
@@ -24,3 +25,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 //cargar un archivo estatico
 app.use(express.static(path.join(__dirname, '../public')));
+
+app.use('/apiuser', usuarioRouter)
