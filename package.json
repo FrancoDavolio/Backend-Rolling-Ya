@@ -1,0 +1,33 @@
+{
+  "name": "backend-rolling-ya",
+  "version": "1.0.0",
+  "description": "backend de una pagina de pedidos de comida, donde el usuario se tiene q registrar para poder hacer los pedidos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/FrancoDavolio/Backend-Rolling-Ya.git"
+  },
+  "keywords": [
+    "backend.",
+    "express",
+    "rutas",
+    "mongodb"
+  ],
+  "author": "Franco Davolio",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0"
+  }
+}
