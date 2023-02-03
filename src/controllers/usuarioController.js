@@ -16,6 +16,7 @@ export const listarUsuarios = async (req, res) => {
 }
 
 export const login = async (req, res) => {
+  console.log('Hola')
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -92,12 +93,20 @@ export const crearUsuario = async (req, res) => {
 
     await usuario.save()
 
+    const token = await generarJWT(
+      usuario._id,
+      usuario.nombre,
+      usuario.perfil,
+      usuario.estado,
+    )
+
     res.status(201).json({
       mensaje: 'usuario creado',
       nombre: usuario.nombre,
       perfil: usuario.perfil,
       estado: usuario.estado,
       uid: usuario._id,
+      token
     })
   } catch (error) {
     console.log(error)

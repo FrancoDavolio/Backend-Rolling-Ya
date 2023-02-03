@@ -26,4 +26,4 @@ app.use(morgan('dev'));
 //cargar un archivo estatico
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.use('/apiuser', usuarioRouter)
+app.use('/apirollingya', usuarioRouter)

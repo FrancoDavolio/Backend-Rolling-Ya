@@ -6,7 +6,7 @@ const usuarioRouter = Router()
 
 usuarioRouter.route('/listar').get(listarUsuarios)
 
-usuarioRouter.route('/').post(
+usuarioRouter.route('/login').post(
     [
         check('email', 'Email no valido')
           .isEmail()
@@ -25,7 +25,7 @@ usuarioRouter.route('/').post(
       login
 )
 
-usuarioRouter.route('/nuevo').get(listarUsuarios).post(
+usuarioRouter.route('/nuevo').post(
     [
         check('nombre', 'El nombre es obligatorio')
           .not()
